@@ -1,12 +1,35 @@
-# React + Vite
+# โปรแกรมจดบันทึกรายการสิ่งที่ต้องทำ (React)
+* เพิ่ม รายการสิ่งที่ต้องทำ
+* ลบ รายการสิ่งที่ต้องทำ
+* เครื่องหมายถูกรายการที่ทำเสร็จแล้ว (Checkbox)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## ดูตัวอย่างการใช้งาน (Live Demo)
+**คุณสามารถลองใช้งานโปรแกรมจดบันทึกรายการสิ่งที่ต้องทำ:**
+(<a href="https://pnwboon.github.io/todo-react/" target="_blank" rel="noopener noreferrer">**คลิกเพื่อใช้งาน โปรแกรมจดบันทึกรายการสิ่งที่ต้องทำ**</a>)
 
-Currently, two official plugins are available:
+## ภาษาและเทคโนโลยีที่ใช้
+* **Frontend:** React (HTML, CSS, JavaScript)
+* **Material UI** (<a href="https://mui.com/">**คลิกเพื่อใช้งาน MUI**</a>)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## การติดตั้งและใช้งาน
+1.  **โคลน Repository:**
+    เปิด Terminal หรือ Command Prompt แล้วใช้คำสั่ง:
+    ```bash
+    git clone https://github.com/pnwboon/todo-react.git
+    ```
+2.  **เข้าสู่ Directory โปรเจกต์:**
+    หลังจากโคลนเสร็จ ให้เข้าไปในโฟลเดอร์ของโปรเจกต์:
+    ```bash
+    cd todo-react
+    ```
+3.  **ติดตั้ง Dependencies:**
+    ติดตั้งแพ็คเกจและไลบรารีที่จำเป็นสำหรับโปรเจกต์:
+    ```bash
+    npm install
+    ```
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+4.  **รันแอปพลิเคชัน:**
+    เริ่มต้นแอปพลิเคชันในโหมดพัฒนา:
+    ```bash
+    npm run dev
+    ```
