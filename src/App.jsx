@@ -1,35 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
+import Header from "./components/Header";
+import { Container } from "@mui/material";
+import { Box } from "@mui/material";
+import TodoList from "./components/TodoList";
+import AddList from "./components/AddList";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [data, setData] = useState([
+    { id: 1, target: "กวาดบ้าน" },
+    { id: 2, target: "ถูบ้าน" },
+    { id: 3, target: "ล้างจาน" },
+    { id: 4, target: "ทำการบ้านคณิตศาสตร์" },
+    { id: 5, target: "ทำการบ้านภาษาไทย" },
+  ]);
+
+  function deleteTarget(id) {
+    const result = data.filter((target) => target.id !== id)
+    setData(result)
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="App">
+      <Box sx={{ background: "gray" }}>
+        <Container maxWidth="lg" sx={{ paddingY: "16px" }}>
+          <Header />
+        </Container>
+      </Box>
+      <Box sx={{ background: "white" }}>
+        <Container>
+          <AddList data={data} setData={setData} />
+          <TodoList data={data} deleteTarget={deleteTarget} />
+        </Container>
+      </Box>
+    </div>
+  );
 }
 
-export default App
+export default App;
