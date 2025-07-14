@@ -22,17 +22,11 @@ function App() {
 
   return (
     <div className="App">
-      <Box sx={{ background: "gray" }}>
-        <Container maxWidth="lg" sx={{ paddingY: "16px" }}>
           <Header />
-        </Container>
-      </Box>
-      <Box sx={{ background: "white" }}>
         <Container>
           <AddList data={data} setData={setData} />
           <TodoList data={data} deleteTarget={deleteTarget} />
         </Container>
-      </Box>
     </div>
   );
 }
